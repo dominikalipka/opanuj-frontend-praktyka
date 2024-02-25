@@ -1,9 +1,8 @@
-import { useContext } from 'react';
 import Product from '../components/Product';
-import { ProductContext } from '../contexts/ProductContext';
+import { useGetProductsQuery } from '../services/products';
 
 const Home = () => {
-  const { products } = useContext(ProductContext);
+  const products = useGetProductsQuery().data || [];
 
   return (
     <div>
