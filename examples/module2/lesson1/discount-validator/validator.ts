@@ -17,5 +17,9 @@ export function formValidator(
     errors.push('Age must be a positive number');
   }
 
+  if (typeof age !== 'number') {
+    errors.push('Age must be a number');
+  }
+
   return errors;
 }
